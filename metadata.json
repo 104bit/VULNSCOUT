@@ -1,0 +1,5 @@
+{
+  "name": "VulnScout AI",
+  "description": "A real-time vulnerability intelligence tool that uses Gemini and Google Search to aggregate known security flaws, CVEs, and exploits for specific websites or applications.",
+  "requestFramePermissions": []
+}

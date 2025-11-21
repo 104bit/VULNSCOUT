@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VulnScout AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                900: '#050a0f',
+                800: '#0a1622',
+                700: '#112233',
+                500: '#00bcd4',
+                400: '#26e6f9',
+                accent: '#f59e0b',
+                danger: '#ef4444'
+              }
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scan': 'scan 2s linear infinite',
+            },
+            keyframes: {
+              scan: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme('colors.slate.300'),
+                  h1: { color: theme('colors.white') },
+                  h2: { color: theme('colors.cyber.500') },
+                  h3: { color: theme('colors.cyber.400') },
+                  strong: { color: theme('colors.cyber.400') },
+                  code: { color: theme('colors.cyber.400') },
+                  a: { color: theme('colors.cyber.400'), '&:hover': { color: theme('colors.cyber.500') } },
+                },
+              },
+            }),
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a tech feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050a0f; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #112233; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00bcd4; 
+      }
+      .scan-line {
+        background: linear-gradient(to bottom, transparent, rgba(38, 230, 249, 0.3), transparent);
+      }
+      /* Markdown Styles */
+      .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+        color: #26e6f9;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      .markdown-body h1 { font-size: 1.5rem; border-bottom: 1px solid #112233; padding-bottom: 0.5rem; }
+      .markdown-body h2 { font-size: 1.25rem; }
+      .markdown-body h3 { font-size: 1.1rem; color: #f59e0b; }
+      
+      .markdown-body p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+      }
+      .markdown-body ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+        color: #94a3b8;
+      }
+      .markdown-body li {
+        margin-bottom: 0.25rem;
+      }
+      .markdown-body strong {
+        color: #fff;
+        font-weight: 600;
+      }
+      .markdown-body pre {
+        background-color: #0d1b2a;
+        border: 1px solid #1e293b;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      .markdown-body pre::before {
+        content: "PAYLOAD";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #1e293b;
+        color: #64748b;
+        font-size: 0.6rem;
+        padding: 2px 6px;
+        border-bottom-left-radius: 4px;
+      }
+      .markdown-body code {
+        font-family: monospace;
+        color: #ef4444;
+        background: rgba(239, 68, 68, 0.1);
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+      .markdown-body pre code {
+        color: #4ade80;
+        background: transparent;
+        padding: 0;
+      }
+      .markdown-body blockquote {
+        border-left: 4px solid #3b82f6;
+        padding-left: 1rem;
+        color: #94a3b8;
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "marked": "https://esm.sh/marked@12.0.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-cyber-900 text-slate-200 font-sans antialiased overflow-y-auto h-full">
+    <div id="root"></div>
+  </body>
+</html>
