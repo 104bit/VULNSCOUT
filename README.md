@@ -10,7 +10,6 @@ VulnScout AI, **Google Gemini 2.5** modellerini ve **Google Search Grounding** t
 
 Klasik tarayıcıların aksine, hedef sisteme doğrudan paket göndermeden (active scanning yapmadan), internet üzerindeki açık kaynaklardan (OSINT), dokümantasyonlardan ve güncel CVE veritabanlarından bilgi toplayarak olası saldırı yüzeyini haritalandırır.
 
-![App Screenshot](https://via.placeholder.com/1200x600/050a0f/26e6f9?text=VulnScout+Dashboard+Preview)
 
 ## 🚀 Özellikler
 
