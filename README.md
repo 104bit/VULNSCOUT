@@ -41,7 +41,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 ### 1. Repoyu Klonlayın
 ```bash
-git clone https://github.com/KULLANICI_ADINIZ/vulnscout-ai.git
+git clone [https://github.com/104bit/VULNSCOUT]
 cd vulnscout-ai
 ```
 
